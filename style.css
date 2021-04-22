@@ -1,0 +1,84 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  font-size: 2vw;
+}
+
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+body.dark{
+  color: white;
+  background-color: grey;
+  background-image: url("https://cdn.glitch.com/e7b28881-9a34-446e-abdc-3317d6e8db7c%2Fd8425854fa1eec9eb90c769b3e3cd565.jpg?v=1587021925674");
+  
+}
+
+
+figure{
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  vertical-align: top;
+  transition: width 0.4s;
+ 
+}
+
+figure img{
+  width: 130%;
+  border-radius:30vw;
+}
+
+figure img:hover {
+  transition: 0.5s ease;
+  border-radius:0;
+  border:blue solid 1vw;
+}
+
+figcaption{
+  font-size: 0.75rem;
+  text-align:center;
+}
+
+figure.big{
+  width: 12rem;
+  margin-right:5rem;
+}
+
+figure.red:after{
+  content: "";
+  background-color: #0ff000;
+}
+
+
+figure.gray{
+  filter: grayscale(100%);
+}
+
+figure.spin{
+  animation: spinnit 4s ease;
+  animation-iteration-count:infinite;
+}
+
+
+@keyframes spinnit{
+  from {
+      transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+}
